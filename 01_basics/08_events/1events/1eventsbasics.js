@@ -44,7 +44,7 @@
 
 //---------------------------------agar only clicked owl pa krna hai to-------------------------
 
-document.getElementById('images').addEventListener('click', function (e) {
+/*document.getElementById('images').addEventListener('click', function (e) {
     console.log("click inside the url");
 }, false) 
 
@@ -60,4 +60,27 @@ document.getElementById('google').addEventListener('click', function(e){
     e.preventDefault()
     e.stopPropagation()
 
-}, false) // google clicked
+}, false) */// google clicked
+
+
+//--------------------image remove project way - 1--------------
+
+// document.querySelector('#images').addEventListener('click', function(e){
+//     console.log(e.target.parentNode)
+//         let removeIt = e.target.parentNode
+//     removeIt.remove()
+    
+// })
+
+
+//--------------------image remove project way - 2 --------------
+
+document.querySelector('#images').addEventListener('click', function(e){
+    console.log(e.target.tagName)
+if (e.target.tagName === 'IMG') {
+    
+        let removeIt = e.target.parentNode
+       removeIt.parentNode.removeChild(removeIt)  
+}
+  
+})
