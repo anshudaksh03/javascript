@@ -28,8 +28,8 @@ console.log(xhr.readyState)
 
 if(xhr.readyState === 4) {
 
-    const data = this.responseText
-    console.log(data)
+    const data = JSON.parse(this.responseText)
+    console.log( typeof data)
     console.log(data.followers)
 }
 
