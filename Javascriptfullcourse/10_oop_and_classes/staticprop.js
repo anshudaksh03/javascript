@@ -6,7 +6,7 @@ class user {
     logMe(){
         console.log(`username: ${this.username}`)
     }
-    static createId(){
+    static createId(){ // static lagana sa uss method ya property ko rok data hai pjir koi use accees n kr sakta
         return`123`
     }
 }
